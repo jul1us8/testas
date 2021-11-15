@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 uzduotis</title>
+</head>
+<body>
+
+    <h1>Keliamieji metai:</h1>
+
+    {% for metai in visi_metai %}
+
+        {% if (metai % 4) == 0 and (metai % 100) == 0 and (metai % 400) == 0 %}
+            <p>{{metai}}</p>
+
+        {%elif (metai % 4) == 0 and (metai % 100) != 0%}
+            <p>{{metai}}</p>
+
+        {%else%}
+
+        {% endif %}
+    {% endfor %}
+
+
+</body>
+</html>
